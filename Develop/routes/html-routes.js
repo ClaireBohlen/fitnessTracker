@@ -1,20 +1,23 @@
-var path = require("path");
-
-//We have to render three differnt html pages so a seperate html-routes is needed
-
+var path = require('path');
 module.exports = function (app){
-//sending to the index html
-app.get("/", function(req,res){
-  res.sendFile(path.join(__dirname, "homework/MONGO/Develop/public/index.html"))
-})
-//sending to the exercise html
-app.get("/exercise", function(req,res){
-  res.sendFile(path.join(__dirname, "homework/MONGO/Develop/public/exercise.html"))
-})
+  
+  
+  //sned to index html
+  app.get("/", function(req,res){
+    res.sendFile(path.join(__dirname, "../public/index.html"))
+  })
 
-//sedning to the stats html
-app.get("/stats", function(req,res){
-  res.sendFile(path.join(__dirname, "homework/MONGO/Develop/public/stats.html"))
-})
+  //send to exercise html
+  app.get("/exercise", function(req,res){
+    res.sendFile(path.join(__dirname, "../public/exercise.html"))
+  })
+
+  //send to stats html
+  app.get("/stats", function(req,res){
+    res.sendFile(path.join(__dirname, "../public/stats.html"))
+  })
+
+
+
 }
 

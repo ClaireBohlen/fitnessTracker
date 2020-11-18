@@ -1,30 +1,61 @@
 const db = require("../models");
-
-module.exports = function(app){
-  
+const { Workout } = require("../models");
 
 
- app.get("/api/workout", function(req,res){
-        const data =  db.Workout.find()
-        res.json(data)
-      })
-      
-      app.put("/api/workout/:id", function(req,res){
-        var id = req.params.id
-        var data = req.body
-        const updated =  db.Workout.findByIdAndUpdate(id, {$push:{exercises: data}})
-        res.json(updated)
-      })
-      
-      app.post("/api/workout", function(req,res){
-        const newWorkout =  db.Workout.create({})
-        res.json(newWorkout)
-      })
-      
-      app.get("/api/workout/range", function(req,res){
-        const data =  db.Workout.find().limit(7)
-        res.json(data)
-      })
+module.exports = function (app) {
+    app.get("/api/workouts", (req, res) => {
+        db.Workout.find({})
+            .then(dbWorkout => {
+                res.json(dbWorkout)
+            })
+            .catch(err => {
+                console.log("error")
+                res.send(err)
+            })
+    });
     
+    app.post("/api/workouts", (req, res) => {
+        db.Workout.create({})
+        
+            .then(dbWorkout => {
+                res.json(dbWorkout)
+            })
+            .catch(err => {
+                console.log("error")
+                res.send(err)
+            })
+    });
 
-    }
+   
+    app.put("/api/workouts/:id", (req, res) => {
+        Workout.findByIdAndUpdate(
+            {_id: req.params.id},
+            {$push: {exercises: req.body}},
+            {new: true}
+        )
+        .then((dbWorkout) => {
+            if (dbWorkout) {
+                res.json(dbWorkout)
+            } else {
+                console.log("error")
+                res.send(err)
+            }
+        })
+        .catch(err => {
+            console.log("error")
+            res.send(err)
+        })
+    });
+    app.get("/api/workouts/range", (req, res) => {
+      db.Workout.find().sort({day: -1}).limit(7)
+      .then(dbWorkout => {
+          res.json(dbWorkout)
+      })
+      .catch(err => {
+          console.log("error")
+          res.send(err)
+      })
+  });
+}
+
+

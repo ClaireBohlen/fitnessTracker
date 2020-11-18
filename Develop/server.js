@@ -2,6 +2,7 @@ const express = require("express"); //requring express
 const logger = require("morgan"); // requireing middleware
 const mongoose = require("mongoose"); //requiring mongoose package
 
+
 const PORT = process.env.PORT || 3000; 
 
 const db = require("./models"); //requiring mongoose schemas
@@ -17,8 +18,9 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { useNewUrlParser: true });
 
 //Requiring in the routes
-require("./routes/api-routes.js"); (app)
-require("./routes/html-routes.js"); (app)
+
+require("./routes/api-routes.js")(app)
+require("./routes/html-routes.js")(app)
 
 
 app.listen(PORT, () => {
