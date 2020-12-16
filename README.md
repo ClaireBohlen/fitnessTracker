@@ -1,42 +1,136 @@
-
-##Title: Fitness Tracker
-
-##Github UserName: ClaireBohlen
-
-##Here is the link to my deployed application: 
-Heroku:https://fierce-spire-72446.herokuapp.com/
-Repo: https://github.com/ClaireBohlen/fitnessTracker
-
-Table of Contents: 
-* [Description] (#description)
-* [Installation](#install)
-* [Contribute](#guidlines)
-* [License](#license)
-* [Test](#test)
-* [Contact](#contact)
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![MIT License][license-shield]][license-url]
+[![Portfolio][portfolio-shield]][portfolio-url]
+<!-- See bottom of readme for badge information -->
 
 
-##Below is a description of my project: 
+
+<!-- MY LOGO FROM NOUN PROJECT-->
+<br />
+<p align="center">
+  <a href="https://github.com/ClaireBohlen">
+    <img src="readMeAssets/Bear.svg" alt="Logo" width="100" height="80">
+  </a>
+
+  <h3 align="center">Fitness Tracker</h3>
+
+  <p align="center">
+    Quick Description
+    <br />
+    <!-- Enter repo url here -->
+    <a href="https://github.com/ClaireBohlen/fitnessTracker"><strong>Explore the Repo »</strong></a> 
+    <br />
+    <br />
+    <a href="https://fierce-spire-72446.herokuapp.com/">Live Demo 🚀</a>
+    
+   
+  </p>
+</p>
+
+
+
+<!-- Table of Contents -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+<!-- Take a screen shot and save it in readMeAssets -->
+<img src="./readMeAssets/fitness.png" width="200">
+<img src="./readMeAssets/fitness2.png" width="200" height="136>
+
 
 Fitness Tracker is an application that can track past and current workouts, display the current date & display to the totl duration of your workout history. You can add new workouts from two catergories and store them using Mongo Atlas.
 
-![Images](homework/MONGO/assests/Atlas.png)
-![Images](homework/MONGO/assests/fitness.png)
-![Images](homework/MONGO/assests/fitness2.png)
 
-##Here are the steps required to install your project:
 
-To install Fitness Tracker application, you would clone the repo from gitgub and run npm install to require in all the packages listed in the package JSON file. This app can be ran on your local server or using Mongo Atlas with Heroku.
+### Built With
+<!-- * [Laravel](https://laravel.com) -->
+* JavaScript
+* Node.js
+* MongoDB
+* Express
+* Mongoose 
 
-##How to contribute: 
 
-Please feel free to make any contributions to this application.
-       
-##License Info:
 
-BSD
-        
+<!-- GETTING STARTED -->
+## Getting Started
 
-##You can contact me with any questions at: 
+To get a local copy up and running follow these simple steps.
 
-clairebohlen@gmail.com
+### Prerequisites
+
+<!-- Node Package Manager -->
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/ClaireBohlen/fitnessTracker.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Claire C. Bohlen - clairebohlen@gmail.com
+
+
+
+
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[portfolio-shield]: https://img.shields.io/badge/PORTFOLIO-URL-blueviolet
+[portfolio-url]: https://clairebohlen.github.io/React-Update-Portfolio-2.0/#/
+
+
+
+[license-shield]: https://img.shields.io/badge/LICENSE-MIT-blueviolet
+[license-url]: (readMeAssets/LICENSE.txt)
+
+[linkedin-shield]: https://img.shields.io/badge/-LINKEDIN-blueviolet
+[linkedin-url]: https://www.linkedin.com/in/claire-bohlen-63a4b5119/
